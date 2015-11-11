@@ -1,0 +1,35 @@
+package hw8;
+
+import java.util.*;
+
+public class CampusModel {
+
+	private static CampusBuildings buildings;
+	private static CampusPaths paths;
+
+	public void buildData() {
+		buildings = new CampusBuildings();
+		paths = new CampusPaths();
+		buildings.buildData("campus_buildings.dat");
+		paths.buildData("campus_paths.dat");
+	}
+	
+	public String findPath(String start, String end) {
+		String l1 = buildings.getLongName(start);
+		String l2 = buildings.getLongName(end);
+		Coordinate startCoords = buildings.getBuildingCoords(start);
+		Coordinate endCoords = buildings.getBuildingCoords(end);
+		return paths.pathToString(start, end, l1, l2, startCoords, endCoords);
+	}
+	
+	public String listBuildings() {
+		String result = "";
+
+		Map<String,String> names = buildings.allNames();
+		Set<String> abbreviated = new TreeSet<String>(names.keySet());
+		for(String str : abbreviated) {
+			result += System.lineSeparator() + str + ": " + names.get(str);
+		}
+		return result;
+	}
+}

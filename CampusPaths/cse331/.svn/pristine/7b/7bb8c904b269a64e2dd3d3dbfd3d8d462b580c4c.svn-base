@@ -1,0 +1,15 @@
+# Test creating a graph with MarvelPaths2
+
+created graph csefriends
+added node Raquel to csefriends
+added node Duncan to csefriends
+added node Jack to csefriends
+added edge 0.500 from Raquel to Duncan in csefriends
+added edge 1.200 from Duncan to Jack in csefriends
+
+# Check all the nodes were properly added
+csefriends contains: Duncan Jack Raquel
+
+# Check all the edges were properly added
+the children of Raquel in csefriends are: Duncan(0.5)
+the children of Duncan in csefriends are: Jack(1.2)

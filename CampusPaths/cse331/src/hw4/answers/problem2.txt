@@ -1,0 +1,29 @@
+a. Where did you include calls to checkRep (at the beginning of methods, the end of methods,
+   the beginning of constructors, the end of constructors, some combination)? Why?
+   I did not include any more calls to checkRep in my RatNum.java. This is because my fields
+   cannot/should not be changed since my class is immutable. So after my fields have been
+   initialized in the constructor, I want to make sure they are valid but after that they will
+   not change. 
+  
+b. All methods that rely on the invariant would now have to be changed. This includes:
+   	add() - My add method originally depended on the exponent being set to zero if the coefficient was zero
+   	        but while fixing my code, I implemented it in a way that no longer depends on this. The complexity
+   	        is not significantly (if even) greater. 
+   	checkRep()	- Would no longer have to check that both the coeff and expt are zero. If I called checkRep() a
+                  lot, then this would make the code less complex, but since I don't it won't make a
+                  significant difference.
+   	equals()	- Equals would no longer be correct. The coefficients could be equal (0) but the expt
+   			   	  may not be. I would have to add an extra check to see if both coeff were zero. This
+   			   	  would add a bit more complexity to the code, but once again not significantly.
+   	toString()	- Would have to add a special case to check if just the coeff was 0. This wouldn't be major.
+   	Constructor - Could remove code where if my coeff is zero, I set my expt to zero.
+   Overall, weakening the invariant would change the implementation too greatly. It would add a
+   bit more complexity, but nothing significant. If the methods are called exhaustively, then it
+   could possibly be considered bad.
+   
+   	
+   
+c. Which set of RatTerm invariants (coeff.isNaN() ==> expt = 0; coeff.equals(RatNum.ZERO) ==> 
+   expt = 0; both; neither) do you prefer? Why?
+   I prefer the first invariant. I feel that it would be easier to implement (less changing of my code) and wouldn't
+   change the complexity too greatly. 

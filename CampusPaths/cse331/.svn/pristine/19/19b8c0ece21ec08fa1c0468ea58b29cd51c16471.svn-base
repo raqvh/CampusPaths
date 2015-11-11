@@ -1,0 +1,12 @@
+The Three Pieces: Model, View, Controller
+
+List which parts of my code belong to these different parts.
+
+My Program:
+    Model: CampusBuildings.java, CampusBuildingsParser.java, Coordinate, CampusPaths.java
+           CampusPathsParser.java, CampusModel.java, and CampusPathsComparator.java
+           
+    Controller: CampusDataController.java
+    
+    View: CampusView.java
+

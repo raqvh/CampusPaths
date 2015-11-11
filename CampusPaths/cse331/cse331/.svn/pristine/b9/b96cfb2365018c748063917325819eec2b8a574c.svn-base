@@ -1,0 +1,65 @@
+a. For each of the classes below, write the abstraction function and representation invariant, 
+   referring to the source code provided in the hw5/problem1 package of your project.
+	IntQueue1:
+	
+	Abstraction Function:
+		AF(r) = a queue, q, such that
+		q.entries = [n1, n2, ..., n_k] (where n_k = size-1)
+		
+	Representation Invariant:
+		RI(r) = ! (entries.size() < 0 || entries == null)
+				  for(entry : entries)
+				  	! (entry == null) 
+	
+	IntQueue2
+		Abstraction Function:
+			AF(r) = a queue, q, such that
+			q.front = front of the queue
+			q.size = (front + entries.length -1)
+			size = number of elements in the queue.
+			q.entries = [n1, n2, ..., n_k] (where n_k = size-1)
+		
+		Rep Invariant:
+			RI(r) = ! (front < 0 || size < 0 || size < front)
+					! (entries == null)
+
+b. Equivalent:
+		a, d, g
+		b, h
+		c, f
+		e
+		
+c. 
+	public int solveEquations(int x, int y, int z)
+		Could expose rep:
+			If the integers get stored at all as fields for the class, they may have to be
+			> 0 (for example) and would expose the rep.
+			If they are simply being used for just this equation, then they should not 
+			expose the rep.
+		
+		FINISH THIS ONE AL;KJFALSKFJALSKFJ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;SAFHASLKFHASL;KFHASLFKH
+	public String[] decode(boolean slowly)
+		Could expose rep:
+			If the array returned is part of the class, then the client could possibly 
+			change things in the array and expose the rep.
+		
+	private Date myBirthday()
+		Could possibly expose rep:
+			If Date is not immutable, the client could possibly change information for Date and
+			expose the rep.
+			If Date is a new object created and has no effect on the class, then it should not
+			expose the rep.
+	
+	public String toString()
+		could not expose rep:
+			Strings are immutable, so the client can't do anything.
+			
+	public Iterator<Integer> elements()
+		could expose rep:
+			If the client is returned an iterator to something important in the class, they could
+			possibly change the object and expose the rep.
+			
+	public Deck(List<Card> cards)
+		could expose rep:
+			They could give a parameter of cards that is null, assuming it is not allowed.
+			

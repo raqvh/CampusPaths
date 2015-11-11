@@ -1,0 +1,9 @@
+#Test that the shortest path is found
+
+LoadGraph friends CSEfriends.tsv
+
+#Check for shortest path
+FindPath friends Raquel Duncan
+
+#Check with a longer path (still shortest)
+FindPath friends Jack Shilpa

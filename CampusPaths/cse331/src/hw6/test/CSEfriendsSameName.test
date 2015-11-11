@@ -1,0 +1,5 @@
+#Test finding a path from one name to the same name
+
+LoadGraph friends CSEfriends.tsv
+
+FindPath friends Ashley Ashley

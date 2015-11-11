@@ -1,0 +1,4 @@
+#Test we can build a graph with CSEfriends.tsv
+
+LoadGraph friends CSEfriends.tsv
+ListChildren friends Raquel

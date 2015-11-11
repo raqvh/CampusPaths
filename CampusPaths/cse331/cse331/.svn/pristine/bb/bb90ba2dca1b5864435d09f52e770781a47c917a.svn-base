@@ -1,0 +1,27 @@
+# Test that removeEdge properly removed an edge from the graph
+
+# Create an empty graph
+CreateGraph graph1
+
+# Add nodes
+AddNode graph1 n1
+AddNode graph1 n2
+AddNode graph1 n3
+
+# Add edges
+AddEdge graph1 n1 n2 e1
+AddEdge graph1 n2 n1 e2
+
+# Print nodes in graph
+ListNode graph1
+
+# Print edges in graph
+ListChildren graph1 n1
+ListChildren graph1 n2
+
+# Remove an edge in graph
+RemoveEdge graph1 n1 n2 e1
+
+# Print edges in graph
+ListChildren graph1 n1
+ListChildren graph1 n2

@@ -1,0 +1,39 @@
+# This test file tests that nodes can be properly removed from the graph
+
+# Create an empty graph
+created graph graph1
+
+# Add nodes
+added node n1 to graph1
+added node n2 to graph1
+added node n3 to graph1
+
+# Add edges
+added edge e1 from n1 to n2 in graph1
+added edge e2 from n2 to n1 in graph1
+
+# Print nodes in graph
+graph1 contains: n1 n2 n3
+
+# Print edges in graph
+the children of n1 in graph1 are: n2
+the children of n2 in graph1 are: n1
+
+# Remove nodes from graph
+RemoveNode graph1 n3
+
+# Print nodes in graph
+graph1 contains: n1 n2
+
+# Print children in graph
+the children of n1 in graph1 are: n2
+the children of n2 in graph1 are: n1
+
+# Remove node with edges containing node
+removed node n1 from graph1
+
+# Print nodes in graph
+graph1 contains: n2
+
+# Print children in graph
+the children of n2 in graph1 are:

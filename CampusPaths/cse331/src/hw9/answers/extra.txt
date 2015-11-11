@@ -1,0 +1,3 @@
+Extra:
+1. Made map scrollable so that the entire full-sized map may be displayed.
+2. Added automatic scrolling to the start of the path.

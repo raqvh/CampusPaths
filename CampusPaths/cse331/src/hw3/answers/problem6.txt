@@ -1,0 +1,21 @@
+a.
+	Why did Fibonacci fail the testThrowsIllegalArgumentException test? 
+		Fibonacci failed this test because it should have only been testing for a
+		negative number, but was set to <= to zero, which also threw an exception on zero
+		when it shouldn't have.
+	What (if anything) did you have to do to fix it?
+		I had to change the exception to only include negatives and not zero case.
+b.
+	Why did Fibonacci fail the testBaseCase test? 
+		Fibonacci failed testBaseCase because 0 was throwing an exception when it should not
+		have been.
+	What (if anything) did you have to do to fix it?
+		This issue was fixed when I fixed the testThrowsIllegalArgumentException test.
+c.
+	Why did Fibonacci fail the testInductiveCase test?
+		Fibonacci failed the testInductiveCase because it needed only to return 1 for the
+		0 and 1 case (first two terms in Fib sequence are zero). Also the sum of the subsequent
+		terms needed to be added, not subtracted. 
+	What (if anything) did you have to do to fix it?
+		I fixed the method to return 1 only if n < 2 instead of n <=2 (that would be three 1's).
+		I also fixed the return to add the subsequent values instead of subtract.

@@ -1,0 +1,15 @@
+The Three Pieces: Model, View, Controller
+
+List which parts of my code belong to these different parts.
+If a class implements multiple parts, then indicate what methods/lines represent which part.
+
+Model: classes that represent data as well as classes that load, store, look up, or operate on data. 
+These classes know nothing about what information is displayed to the user and how it is formatted.
+Rather, the model exposes observer methods the view can call to get the information it needs.
+
+View: implements the suer interface. Should store as little data and perform as little computation 
+as possible. (Should rely on the model for data storage)
+
+Controller: listens to user input. Based on the user's input, determines the intentions and dispatches
+appropriate methods in the model view. (interpretor) 
+

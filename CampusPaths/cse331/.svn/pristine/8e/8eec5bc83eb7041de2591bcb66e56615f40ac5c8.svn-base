@@ -1,0 +1,9 @@
+# Test that MarvelPaths2 uses Dijkstra to find the min-cost path
+
+LoadGraph csefriends CSEfriends.tsv
+
+# Simple case
+FindPath csefriends Jack Duncan
+
+# Different case
+FindPath csefriends Ashley Duncan

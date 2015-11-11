@@ -1,0 +1,98 @@
+Testsuite: hw6.test.SpecificationTests
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+
+Testcase: checkAgainstExpectedOutput[0] took 0.009 sec
+	FAILED
+exampleTestParserSmallishGraph.test expected:<[# Test the parser on a graph that contains several nodes
+# with two edges each.
+
+loaded graph heroes
+the children of Ernst-the-Bicycling-Wizard in heroes are: Grossman-the-Youngest-of-them-all(CSE331) Notkin-of-the-Superhuman-Beard(CSE331) Notkin-of-the-Superhuman-Beard(CSE403) Perkins-the-Magical-Singing-Instructor(CSE331)
+]> but was:<[]>
+junit.framework.AssertionFailedError: exampleTestParserSmallishGraph.test expected:<[# Test the parser on a graph that contains several nodes
+# with two edges each.
+
+loaded graph heroes
+the children of Ernst-the-Bicycling-Wizard in heroes are: Grossman-the-Youngest-of-them-all(CSE331) Notkin-of-the-Superhuman-Beard(CSE331) Notkin-of-the-Superhuman-Beard(CSE403) Perkins-the-Magical-Singing-Instructor(CSE331)
+]> but was:<[]>
+	at hw6.test.ScriptFileTests.checkAgainstExpectedOutput(ScriptFileTests.java:193)
+
+Testcase: checkAgainstExpectedOutput[1] took 0.002 sec
+	FAILED
+exampleTestSimpleBFSTwoHops.test expected:<[# Simple test of breadth-first search algorithm.
+# Verifies that it can find a path with two "hops" (edges) when there are no
+# other edges in the graph.
+# Note that in this graph, there is an edge from GORILLA-MAN to HAWK but not
+# vice versa. In your full parser-generated Marvel graph, relationships are
+# bidirectional, meaning an edge from A to B will always be accompanied by an
+# edge from B to A.
+
+created graph characters
+added node GORILLA-MAN to characters
+added node HAWK to characters
+added node VENUS-II to characters
+added edge AVF-4 from GORILLA-MAN to HAWK in characters
+added edge AVF-5 from HAWK to VENUS-II in characters
+
+path from GORILLA-MAN to VENUS-II:
+GORILLA-MAN to HAWK via AVF-4
+HAWK to VENUS-II via AVF-5
+
+path from HAWK to GORILLA-MAN:
+no path found
+]> but was:<[]>
+junit.framework.AssertionFailedError: exampleTestSimpleBFSTwoHops.test expected:<[# Simple test of breadth-first search algorithm.
+# Verifies that it can find a path with two "hops" (edges) when there are no
+# other edges in the graph.
+# Note that in this graph, there is an edge from GORILLA-MAN to HAWK but not
+# vice versa. In your full parser-generated Marvel graph, relationships are
+# bidirectional, meaning an edge from A to B will always be accompanied by an
+# edge from B to A.
+
+created graph characters
+added node GORILLA-MAN to characters
+added node HAWK to characters
+added node VENUS-II to characters
+added edge AVF-4 from GORILLA-MAN to HAWK in characters
+added edge AVF-5 from HAWK to VENUS-II in characters
+
+path from GORILLA-MAN to VENUS-II:
+GORILLA-MAN to HAWK via AVF-4
+HAWK to VENUS-II via AVF-5
+
+path from HAWK to GORILLA-MAN:
+no path found
+]> but was:<[]>
+	at hw6.test.ScriptFileTests.checkAgainstExpectedOutput(ScriptFileTests.java:193)
+
+Testcase: checkAgainstExpectedOutput[2] took 0.002 sec
+	FAILED
+exampleTestMarvelOneHop.test expected:<[# Find a path with only one "hop" (edge) using the full Marvel dataset.
+# This test exercises both the parser and BFS algorithm on a rather large
+# graph, so it is more of a system test than a true unit test. Such tests
+# should only be run after you have tested the parser and BFS algorithm
+# separately on much smaller graphs.
+
+# To run this test, you will need to have downloaded the marvel dataset and
+# place it in src/hw5/data/marvel.tsv.
+
+loaded graph marvel
+
+path from BEAST/HENRY &HANK& P to WISDOM, PETER:
+BEAST/HENRY &HANK& P to WISDOM, PETER via X:PRIME
+]> but was:<[]>
+junit.framework.AssertionFailedError: exampleTestMarvelOneHop.test expected:<[# Find a path with only one "hop" (edge) using the full Marvel dataset.
+# This test exercises both the parser and BFS algorithm on a rather large
+# should only be run after you have tested the parser and BFS algorithm
+# separately on much smaller graphs.
+
+# To run this test, you will need to have downloaded the marvel dataset and
+# place it in src/hw5/data/marvel.tsv.
+
+loaded graph marvel
+
+path from BEAST/HENRY &HANK& P to WISDOM, PETER:
+BEAST/HENRY &HANK& P to WISDOM, PETER via X:PRIME
+]> but was:<[]>
+	at hw6.test.ScriptFileTests.checkAgainstExpectedOutput(ScriptFileTests.java:193)
+

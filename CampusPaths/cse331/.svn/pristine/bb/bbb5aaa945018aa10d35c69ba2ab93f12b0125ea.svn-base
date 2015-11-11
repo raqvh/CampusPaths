@@ -1,0 +1,7 @@
+# Verify that the program produces the correct output for an unknown command
+r r
+
+abc
+
+# All of your test scripts should end with q to terminate the program.
+q

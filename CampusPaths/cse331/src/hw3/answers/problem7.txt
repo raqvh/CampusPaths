@@ -1,0 +1,22 @@
+There are two obvious approaches for implementing getVolume():
+	1. Every time getVolume() is called, go through all the Balls in the Set and add up the volumes. 
+	(Hint: one solution might use a for-each loop to extract Balls from the Set.)
+	2. Keep track of the total volume of the Balls in BallContainer whenever Balls are added and removed. 
+	This eliminates the need to perform any computations when getVolume is called.
+
+Which approach do you think is the better one? Why?
+	I would consider the second implementation to be better. The reason why, is because if getVolume
+	is called multiple times, then it is not very efficient to have to loop through the set every
+	time. It would be more efficient to just update the volume as needed and return that value.
+	
+There are many ways to implement getBallsFromSmallest(). Briefly describe at least two different ways. 
+	1. One way to implement would be by using the Comparable interface on Ball.java. This would allow me to sort
+	a collection containing multiple ball objects. 
+	2. Another way to implement this would be by going through my collection of ball objects and sorting them
+	myself within the getBallsFromSmallest() method. I could do this using a while loop and iterator.
+	3. Another way to do this would be to put the balls in in sorted order. Then all I would need to do is
+	return an iterator in the getBallsFromSmallest list. This may not be most efficient though.
+	
+Which of the above ways do you think is the best? Why?
+	I feel that implementing the Comparable interface would be better, but I am told that I should not do this.
+	My second idea of implementation does not seem as efficient, so I don't feel as inclined to use it.

@@ -1,0 +1,9 @@
+#Test trying to find a path with a nonexistant character
+
+LoadGraph friends CSEfriends.tsv
+
+#First character is unknown
+FindPath friends John Jack
+
+#Second character is unknown
+FindPath friends Raquel Sarah

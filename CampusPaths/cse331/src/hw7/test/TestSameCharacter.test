@@ -1,0 +1,5 @@
+# Test the expected output when trying to find a path to the same character
+
+LoadGraph csefriends CSEfriends.tsv
+
+FindPath csefriends Raquel Raquel

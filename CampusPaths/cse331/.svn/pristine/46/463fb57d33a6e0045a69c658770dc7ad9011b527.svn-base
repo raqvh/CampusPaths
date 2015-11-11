@@ -1,0 +1,11 @@
+#Test trying to find a path with a nonexistant character
+
+loaded graph friends
+
+#First character is unknown
+path from John to Jack:
+Unknown character: John
+
+#Second character is unknown
+path from Raquel to Sarah:
+Unknown character: Sarah

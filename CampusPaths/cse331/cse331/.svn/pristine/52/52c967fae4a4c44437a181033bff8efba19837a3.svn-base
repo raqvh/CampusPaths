@@ -1,0 +1,47 @@
+a: Suppose the representation invariant were weakened so that we did not require that the numer
+   and denom fields be stored in reduced form. This means that the method implementations could 
+   no longer assume this invariant held on entry to the method, but they also would no longer be 
+   required to enforce the invariant on exit. The new rep invariant would then be:
+   
+   // Rep Invariant for every RatNum r: ( r.denom >= 0 )
+   
+   List the method or constructor implementations that would have to change. For each changed piece
+   of code, describe the changes informally, and indicate how much more or less complex (in terms 
+   of code clarity and/or execution efficiency) the result would be. Note that the new 
+   implementations must still adhere to the given spec; in particular, RatNum.toString() needs to 
+   output fractions in reduced form.
+   
+   If these changes were made to the rep invariant, then the following code would have to be changed:
+   1. The constructor RatNum(n, d) would no longer have to reduce the fraction which would require less code/work.
+   2. toString() would have to reduce the fraction before converting the string. It could use the same method
+      originally used in the RatNum constructor.
+   3. equals() would have to reduce the RatNumbs before comparing if the numbers were ==.
+   Overall, this change would make the code longer and more complex. Certain methods (mentioned above) would be
+   required to implement code that reduced the rat num and this may have to be done several times if multiple
+   methods are called, compared to it just being done once in the beginning.
+   
+b. add, sub, mul, and div all end with a statement of the form return new RatNum ( numerExpr , denomExpr);. 
+   Consider an implementation of the same methods that instead end with:
+   
+   this.numer = numerExpr;
+   this.denom = denomExpr;
+   return this;
+   
+   How would the above changes fail to meet the specifications of the methods and fail to meet the specifications 
+   of the RatNum class?
+   
+   1. The return values wouldn't be valid. Since 'this' has been changed, what is being returned is no
+      longer returns : (this */+/- arg). So all the return values for these methods would have to be updated.
+   2. The methods do not mention that 'this' RatNum is modified. This would have to be added to the method specs.
+   3. Finally, since we are changing the values of "this" RatNum would no longer be immutable, since it is being
+      modified. So the specifications of the RatNum class are also incorrect. 
+      
+c. Calls to checkRep are supposed to catch violations in the invariants of a class. In general, recommended 
+   practice is to call checkRep at the beginning and end of every method. In the case of RatNum, why is it 
+   sufficient to call checkRep only at the end of the constructors?
+   
+   It is sufficient to call checkRep only at the end, because RatNum has been designed to be immutable. 
+   The class fields have been declared final and private which keeps anything outside out the constructors
+   from changing the values. Basically, it can't be modified. And because checkRep() is called at the end
+   of the constructors, a RatNum taken in as a parameter must meet the rep invarient because it was 
+   checked immediately after construction. 

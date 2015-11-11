@@ -1,0 +1,6 @@
+# Test CreateGraph
+# Tests that a graph can be created
+# The graph has no nodes or edges
+
+# Create a graph
+CreateGraph graph1

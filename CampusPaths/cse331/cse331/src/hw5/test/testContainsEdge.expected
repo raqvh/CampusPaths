@@ -1,0 +1,25 @@
+# Tests that containsEdge properly checks for an edge
+
+# Create an empty graph
+created graph graph1
+
+# Add nodes
+added node n1 to graph1
+added node n2 to graph1
+added node n3 to graph1
+
+# Add edges
+added edge e1 from n1 to n2 in graph1
+added edge e2 from n2 to n1 in graph1
+
+# Print edges in graph
+the children of n1 in graph1 are: n2
+the children of n2 in graph1 are: n1
+
+# Check contains on existing
+contains e1 in graph1 is true
+contains e2 in graph1 is true
+
+# Check contain on nonexisting
+contains e3 in graph1 if false
+contains e4 in graph1 is false

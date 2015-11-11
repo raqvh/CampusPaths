@@ -1,0 +1,25 @@
+# Tests that containsEdge properly checks for an edge
+
+# Create an empty graph
+CreateGraph graph1
+
+# Add nodes
+AddNode graph1 n1
+AddNode graph1 n2
+AddNode graph1 n3
+
+# Add edges
+AddEdge graph1 n1 n2 e1
+AddEdge graph1 n2 n1 e2
+
+# Print edges in graph
+ListChildren graph1 n1
+ListChildren graph1 n2
+
+# Check contains on existing
+ContainsEdge graph1 n1 n2 e1
+ContainsEdge graph1 n2 n1 e2
+
+# Check contain on nonexisting
+ContainsEdge graph1 n2 n3 e3
+ContainsEdge graph1 n3 n2 e4

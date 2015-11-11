@@ -1,0 +1,22 @@
+# This test file tests that nodes can be properly added to the graph
+
+# Create an empty graph
+CreateGraph graph1
+
+# Add a node
+AddNode graph1 n1
+
+# Print nodes in graph
+ListNode graph1
+
+# Add a second node
+AddNode graph1 n2
+
+# Print nodes in graph
+ListNode graph1
+
+# Add existent node
+AddNode graph1 n1
+
+# Print nodes in graph
+ListNode graph1

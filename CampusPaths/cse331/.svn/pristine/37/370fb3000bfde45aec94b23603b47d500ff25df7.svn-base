@@ -1,0 +1,54 @@
+package hw8;
+
+import java.util.Scanner;
+
+public class CampusView {
+	
+	// where everything will be printed out
+	private static Scanner userInput;
+	
+	public void menu() {
+		System.out.println("Menu:");
+		System.out.println("\tr to find a route");
+		System.out.println("\tb to see a list of all buildings");
+		System.out.println("\tq to quit");
+		//System.out.println();
+	}
+	
+	public String getCommand() {
+		//System.out.println();
+		return userInput.nextLine();
+	}
+	
+	public void print(String stuffToPrint) {
+		System.out.println(stuffToPrint);
+	}
+	
+	/*
+	public void blankLine() {
+		System.out.println();
+	}
+	*/
+	
+	/*
+	public void println(String stuffToPrint) {
+		System.out.print(stuffToPrint);
+	}
+	*/
+	public void open() {
+		userInput = new Scanner(System.in);
+	}
+	
+	public void close() {
+		userInput.close();
+	}
+	
+	public String getInput() {
+		return userInput.nextLine();
+	}
+	
+	public void promptUser(String stuffToPrint) {
+		System.out.print(stuffToPrint);
+	}
+}
+

@@ -1,0 +1,7 @@
+# Test the proper output when there is not a path between two nodes
+
+loaded graph csefriends
+
+# No Path between these two nodes
+path from Raquel to Jeremy:
+no path found

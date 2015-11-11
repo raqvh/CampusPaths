@@ -1,0 +1,5 @@
+#Test finding a path in a graph where there is no solution
+
+LoadGraph friends CSEfriends.tsv
+
+FindPath friends Raquel Jeremy
