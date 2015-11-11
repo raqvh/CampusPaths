@@ -1,8 +1,0 @@
-Changes made to my graph implementation:
-
-	1. Made edge implement comparable, so that my edges could be stored in a treeSet 
-	in sorted order. This made accessing the edges in sorted order much easier.
-
-	1. Changed 'get Children' to return edges with the children nodes instead of just 
-	the children nodes for output formatting purposes. 
-

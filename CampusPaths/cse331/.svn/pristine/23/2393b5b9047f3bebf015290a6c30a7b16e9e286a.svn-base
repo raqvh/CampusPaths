@@ -1,5 +1,0 @@
-# Test loading a graph from a .tsv file.
-
-LoadGraph csefriends CSEfriends.tsv
-
-ListNodes csefriends

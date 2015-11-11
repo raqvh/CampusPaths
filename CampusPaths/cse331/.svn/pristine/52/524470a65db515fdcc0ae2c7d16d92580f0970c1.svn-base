@@ -1,9 +1,0 @@
-# Test nodes are properly listed for a given graph
-
-CreateGraph testgraph
-AddNode testgraph this
-AddNode testgraph should
-AddNode testgraph be
-AddNode testgraph correct
-
-ListNodes testgraph

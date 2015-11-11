@@ -1,9 +1,0 @@
-# Test nodes are properly listed for a given graph
-
-created graph testgraph
-added node this to testgraph
-added node should to testgraph
-added node be to testgraph
-added node correct to testgraph
-
-testgraph contains: this should correct be

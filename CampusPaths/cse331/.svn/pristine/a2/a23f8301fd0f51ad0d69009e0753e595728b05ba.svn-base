@@ -1,4 +1,0 @@
-#Test we can build a graph with CSEfriends.tsv
-
-loaded graph friends
-the children of Raquel in friends are: Duncan(143) Duncan(331) Jack(143) Novin(143)

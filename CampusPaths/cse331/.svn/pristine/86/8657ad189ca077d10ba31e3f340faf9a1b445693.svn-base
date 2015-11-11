@@ -1,6 +1,0 @@
-# Test the proper output when there is not a path between two nodes
-
-LoadGraph csefriends CSEfriends.tsv
-
-# No Path between these two nodes
-FindPath csefriends Raquel Jeremy

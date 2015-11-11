@@ -1,6 +1,0 @@
-# Test CreateGraph
-# Tests that a graph can be created
-# The graph has no nodes or edges
-
-# Create a graph
-created graph graph1

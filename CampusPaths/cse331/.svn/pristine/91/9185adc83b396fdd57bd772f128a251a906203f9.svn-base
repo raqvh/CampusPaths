@@ -1,6 +1,0 @@
-# Test the expected output when trying to find a path to the same character
-
-loaded graph csefriends
-
-path from Raquel to Raquel:
-total cost: 0.000
